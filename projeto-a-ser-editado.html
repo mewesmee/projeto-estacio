@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      href="estilos/style.css"
+      media="screen"
+    /> -->
+    <!--Inicio de Estilo da Pagina-->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #742278;
+      }
+
+
+body::before {
+      content: "";
+      position: absolute;
+      top:50
+      left: 100;
+      width: 100%;
+      height: 100%;
+      background: url(https://snowfruit.com.br/wp-content/webp-express/webp-images/uploads/2021/11/como_aumentar_as_vendas_no_verao_com_as_barcas_de_acai.png.webp) no-repeat center center;
+      background-size: cover;
+      opacity: 0.1;
+      z-index: -5;
+}
+
+
+      header {
+        width: 100%;
+        height: 25vh;
+      }
+      .top_page {
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 70%;
+        float: left;
+      }
+
+
+      .logotipo {
+        display: flex;
+
+
+        position: relative;
+        width: 15vh;
+        height: 15vh;
+      }
+
+
+      .menu {
+        width: 50%;
+        height: 15vh;
+        display: flex;
+        color: #742278;
+        font-weight: bold;
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
+      }
+      .menu a {
+        text-decoration: none;
+        color: #742278;
+      }
+      .menu ul li {
+        display: inline;
+        margin: 2px;
+        padding: 3px;
+        position: relative;
+      }
+
+
+      .menu ul li ul {
+        display: none;
+      }
+
+
+      .menu ul li:hover ul {
+        display: block;
+        position: absolute;
+      }
+      /* Begin Wesley Page Styles*/
+      .container {
+        width: 80%;
+        margin: 0px auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+      h1 {
+        text-align: center;
+        color: #4caf50;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        padding: 12px;
+        text-align: center;
+        border: 1px solid #ddd;
+      }
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .price {
+        font-weight: bold;
+        color: #ff5722;
+      }
+
+
+      /* End Wesley Page Styles*/
+    </style>
+
+
+    <!--Fim Do Estilo da Pagina-->
+    <title>Nossos Sabores</title>
+  </head>
+  <body>
+    <header>
+      <div class="top_page" id="top_page" name="top_page">
+        <div class="logotipo" id="logotipo" name="logotipo">
+          <img src="Imagens/logo.jpg" alt="" />
+        </div>
+        <div class="icones_topo" id="icones_topo" name="icones_topo"></div>
+
+
+        <div class="menu" name="menu" id="menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Cardápio</a></li>
+            <li>Cadastros</li>
+            <li>Mapa do Site</li>
+            <li>Sobre</li>
+            <li>Ajuda</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <h1>Cardápio da Açaíteria</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Açaí Tradicional</td>
+            <td>Açaí na tigela com granola e mel.</td>
+            <td class="price">R$ 15,00</td>
+          </tr>
+          <tr>
+            <td>Açaí com Frutas</td>
+            <td>Açaí com banana, morango e kiwi.</td>
+            <td class="price">R$ 18,00</td>
+          </tr>
+          <tr>
+            <td>Açaí com Leite Condensado</td>
+            <td>Açaí com leite condensado e granola.</td>
+            <td class="price">R$ 20,00</td>
+          </tr>
+          <tr>
+            <td>Açaí com Nutella</td>
+            <td>Açaí com Nutella e morango.</td>
+            <td class="price">R$ 22,00</td>
+          </tr>
+          <tr>
+            <td>Suco Natural</td>
+            <td>Suco de laranja, abacaxi ou morango.</td>
+            <td class="price">R$ 8,00</td>
+          </tr>
+          <tr>
+            <td>Água de Coco</td>
+            <td>Água de coco gelada.</td>
+            <td class="price">R$ 6,00</td>
+          </tr>
+          <tr>
+            <td>Wrap de Frutas</td>
+            <td>Wrap com frutas e açaí.</td>
+            <td class="price">R$ 14,00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
