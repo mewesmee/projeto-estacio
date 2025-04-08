@@ -17,20 +17,18 @@
         background-color: #742278;
       }
 
-
-body::before {
-      content: "";
-      position: absolute;
-      top:50
-      left: 100;
-      width: 100%;
-      height: 100%;
-      background: url(https://snowfruit.com.br/wp-content/webp-express/webp-images/uploads/2021/11/como_aumentar_as_vendas_no_verao_com_as_barcas_de_acai.png.webp) no-repeat center center;
-      background-size: cover;
-      opacity: 0.1;
-      z-index: -5;
-}
-
+      body::before {
+        content: "";
+        position: absolute;
+        top: 50;
+        left: 100;
+        width: 100%;
+        height: 100%;
+        background: url(https://snowfruit.com.br/wp-content/webp-express/webp-images/uploads/2021/11/como_aumentar_as_vendas_no_verao_com_as_barcas_de_acai.png.webp) no-repeat center center;
+        background-size: cover;
+        opacity: 0.1;
+        z-index: -5;
+      }
 
       header {
         width: 100%;
@@ -46,16 +44,12 @@ body::before {
         float: left;
       }
 
-
       .logotipo {
         display: flex;
-
-
         position: relative;
         width: 15vh;
         height: 15vh;
       }
-
 
       .menu {
         width: 50%;
@@ -78,16 +72,15 @@ body::before {
         position: relative;
       }
 
-
       .menu ul li ul {
         display: none;
       }
-
 
       .menu ul li:hover ul {
         display: block;
         position: absolute;
       }
+
       /* Begin Wesley Page Styles*/
       .container {
         width: 80%;
@@ -123,12 +116,8 @@ body::before {
         font-weight: bold;
         color: #ff5722;
       }
-
-
       /* End Wesley Page Styles*/
     </style>
-
-
     <!--Fim Do Estilo da Pagina-->
     <title>Nossos Sabores</title>
   </head>
@@ -139,7 +128,6 @@ body::before {
           <img src="Imagens/logo.jpg" alt="" />
         </div>
         <div class="icones_topo" id="icones_topo" name="icones_topo"></div>
-
 
         <div class="menu" name="menu" id="menu">
           <ul>
@@ -201,4 +189,29 @@ body::before {
           </tr>
         </tbody>
       </table>
+
+      <!-- Formulário de Opinião -->
+      <h2>Deixe sua opinião</h2>
+      <form>
+        <label for="comentario">Comentário:</label><br />
+        <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Escreva aqui..."></textarea><br /><br />
+
+        <label>Avaliação:</label><br />
+        <input type="radio" id="estrela5" name="avaliacao" value="5" />
+        <label for="estrela5">⭐️⭐️⭐️⭐️⭐️</label><br />
+        <input type="radio" id="estrela4" name="avaliacao" value="4" />
+        <label for="estrela4">⭐️⭐️⭐️⭐️</label><br />
+        <input type="radio" id="estrela3" name="avaliacao" value="3" />
+        <label for="estrela3">⭐️⭐️⭐️</label><br />
+        <input type="radio" id="estrela2" name="avaliacao" value="2" />
+        <label for="estrela2">⭐️⭐️</label><br />
+        <input type="radio" id="estrela1" name="avaliacao" value="1" />
+        <label for="estrela1">⭐️</label><br /><br />
+
+        <input type="submit" value="Enviar Opinião" />
+      </form>
+      <!-- Fim do Formulário -->
+
     </div>
+  </body>
+</html>
