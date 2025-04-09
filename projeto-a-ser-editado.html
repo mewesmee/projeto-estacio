@@ -198,51 +198,126 @@
     <div class="container">
       <h1>Cardápio da Açaíteria</h1>
       <table>
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Descrição</th>
-            <th>Preço</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Açaí Tradicional</td>
-            <td>Açaí na tigela com granola e mel.</td>
-            <td class="price">R$ 15,00</td>
-          </tr>
-          <tr>
-            <td>Açaí com Frutas</td>
-            <td>Açaí com banana, morango e kiwi.</td>
-            <td class="price">R$ 18,00</td>
-          </tr>
-          <tr>
-            <td>Açaí com Leite Condensado</td>
-            <td>Açaí com leite condensado e granola.</td>
-            <td class="price">R$ 20,00</td>
-          </tr>
-          <tr>
-            <td>Açaí com Nutella</td>
-            <td>Açaí com Nutella e morango.</td>
-            <td class="price">R$ 22,00</td>
-          </tr>
-          <tr>
-            <td>Suco Natural</td>
-            <td>Suco de laranja, abacaxi ou morango.</td>
-            <td class="price">R$ 8,00</td>
-          </tr>
-          <tr>
-            <td>Água de Coco</td>
-            <td>Água de coco gelada.</td>
-            <td class="price">R$ 6,00</td>
-          </tr>
-          <tr>
-            <td>Wrap de Frutas</td>
-            <td>Wrap com frutas e açaí.</td>
-            <td class="price">R$ 14,00</td>
-          </tr>
-        </tbody>
+        <style>
+          table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+          }
+          th,
+          td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+          }
+          th {
+            background-color: #4caf50;
+            color: white;
+          }
+          tr:nth-child(even) {
+            background-color: #f2f2f2;
+          }
+          .price {
+            font-weight: bold;
+            color: #ff5722;
+          }
+          button {
+            padding: 8px 12px;
+            background-color: #742278;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          button:hover {
+            background-color: #5d1b61;
+          }
+        </style>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Descrição</th>
+              <th>Preço</th>
+              <th>Adicionar ao pedido</th> <!-- Coluna de adicionar ao pedido -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Açaí Tradicional</td>
+              <td>Açaí na tigela com granola e mel.</td>
+              <td class="price">R$ 15,00</td>
+              <td><button onclick="adicionarAoPedido('Açaí Tradicional', 15)">Adicionar</button></td>
+            </tr>
+            <tr>
+              <td>Açaí com Frutas</td>
+              <td>Açaí com banana, morango e kiwi.</td>
+              <td class="price">R$ 18,00</td>
+              <td><button onclick="adicionarAoPedido('Açaí com Frutas', 18)">Adicionar</button></td>
+            </tr>
+            <tr>
+              <td>Açaí com Leite Condensado</td>
+              <td>Açaí com leite condensado e granola.</td>
+              <td class="price">R$ 20,00</td>
+              <td><button onclick="adicionarAoPedido('Açaí com Leite Condensado', 20)">Adicionar</button></td>
+            </tr>
+            <tr>
+              <td>Açaí com Nutella</td>
+              <td>Açaí com Nutella e morango.</td>
+              <td class="price">R$ 22,00</td>
+              <td><button onclick="adicionarAoPedido('Açaí com Nutella', 22)">Adicionar</button></td>
+            </tr>
+            <tr>
+              <td>Suco Natural</td>
+              <td>Suco de laranja, abacaxi ou morango.</td>
+              <td class="price">R$ 8,00</td>
+              <td><button onclick="adicionarAoPedido('Suco Natural', 8)">Adicionar</button></td>
+            </tr>
+            <tr>
+              <td>Água de Coco</td>
+              <td>Água de coco gelada.</td>
+              <td class="price">R$ 6,00</td>
+              <td><button onclick="adicionarAoPedido('Água de Coco', 6)">Adicionar</button></td>
+            </tr>
+            <tr>
+              <td>Wrap de Frutas</td>
+              <td>Wrap com frutas e açaí.</td>
+              <td class="price">R$ 14,00</td>
+              <td><button onclick="adicionarAoPedido('Wrap de Frutas', 14)">Adicionar</button></td>
+            </tr>
+          </tbody>
+        </table>
+        
       </table>
+
+      <!-- Área do Carrinho -->
+<div class="container" style="margin-top: 40px;">
+  <h2 style="color: #4caf50;">Seu Pedido</h2>
+
+  <table id="carrinho">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Preço</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--Area dos itens que serao adicionados-->
+    </tbody>
+  </table>
+  <br />
+  <button style="
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    ">
+    Finalizar Pedido
+  </button>
+</div> <!-- Fim da Área do Carrinho -->
 
       <!-- Formulário de Opinião -->
       <h2>Deixe sua opinião</h2>
@@ -267,5 +342,7 @@
       <!-- Fim do Formulário -->
 
     </div>
+    <script src="app.js"></script>
+
   </body>
 </html>
