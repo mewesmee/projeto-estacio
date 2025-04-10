@@ -240,7 +240,7 @@
               <th>Item</th>
               <th>Descrição</th>
               <th>Preço</th>
-              <th>Adicionar ao pedido</th> <!-- Coluna de adicionar ao pedido -->
+              <th>Adicionar ao pedido</th>
             </tr>
           </thead>
           <tbody>
@@ -291,26 +291,49 @@
         
       </table>
 
-    <!-- Área do Carrinho -->
+   <!-- Área do Carrinho -->
 <div class="container" style="margin-top: 40px;">
-  <h2 style="color: #4caf50;">Seu Pedido</h2>
-
-  <table id="carrinho">
+  <h2 style="color: #742278; text-align: center; margin-bottom: 20px;">Pedido</h2>
+  
+  <table id="carrinho" style="width: 100%; border-collapse: collapse;">
     <thead>
       <tr>
-        <th>Item</th>
-        <th>Preço</th>
+        <th style="background-color: #742278; color: white; padding: 10px; text-align: left;">Item</th>
+        <th style="background-color: #742278; color: white; padding: 10px; text-align: center;">Preço</th>
+        <th style="background-color: #742278; color: white; padding: 10px; text-align: center;">Quantidade</th>
+        <th style="background-color: #742278; color: white; padding: 10px; text-align: center;">Ação</th>
       </tr>
     </thead>
     <tbody>
-      <!-- itens que serão adicionados -->
+      <!-- itens escolhidos -->
     </tbody>
   </table>
-  <br />
-  <button id="finalizarPedido" style="padding: 10px 20px; background-color: #4caf50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+  
+  <br>
+  <button id="finalizarPedido" style="padding: 10px 20px; background-color: #4caf50; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="finalizarPedido()">
     Finalizar Pedido
   </button>
-</div> <!-- Fim da Área do Carrinho -->
+  <button id="limparCarrinho" style="padding: 10px 20px; background-color: #f44336; color: white; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;" onclick="limparPedido()">
+    Limpar Carrinho
+  </button>
+</div>
+<!--carrinho tbody tr:nth-child(even) faz com que as linhas pares tenham o fundo cinza claro e o nth-child e para selecionar de acordo com a posicao na tabela-->
+<style>
+  #carrinho input.quantidade {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #742278; 
+    border-radius: 4px;
+    font-size: 14px;
+  }
+ 
+   #carrinho tbody tr:nth-child(even) {
+    background-color: #f9f9f9; 
+  }
+
+</style>
+    <!--fim da area do carrinho-->
 
       <!-- Formulário de Opinião -->
       <h2>Deixe sua opinião</h2>
