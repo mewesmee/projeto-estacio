@@ -1,6 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!--pop up de confirmacao-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup de Confirmação</title>
+  <style>
+    
+      .overlay {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          z-index: 100;
+      }
+      
+      .popup {
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 90%;
+          max-width: 400px;
+          background-color: white;
+          border-radius: 8px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          z-index: 101;
+          padding: 20px;
+          box-sizing: border-box;
+      }
+      
+      .popup-conteudo {
+          padding: 10px;
+      }
+      
+      .popup h3 {
+          margin-top: 0;
+          color: #742278;
+          text-align: center;
+      }
+      
+      #resumo-pedido ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 15px 0;
+      }
+      
+      #resumo-pedido li {
+          padding: 8px 0;
+          border-bottom: 1px solid #eee;
+      }
+      
+      .total {
+          text-align: right;
+          font-size: 1.1em;
+          margin-top: 15px;
+          padding-top: 10px;
+          border-top: 2px solid #742278;
+      }
+      
+      .popup-botoes {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 20px;
+      }
+  </style>
+</head>
+<body>
+  <div id="popup-confirmacao" class="popup">
+    <div class="popup-conteudo">
+      <h3>Confirme e envie seu pedido</h3>
+      
+      <div id="resumo-pedido">
+        <ul>
+          <li>2x Açaí Tradicional - R$ 30,00</li>
+          <li>1x Açaí com Nutella - R$ 22,00</li>
+        </ul>
+        <p class="total"><strong>Total: R$ 52,00</strong></p>
+      </div>
+      
+      <div class="popup-botoes">
+        <button id="enviar-pedido" class="botao-confirmar" onclick="enviarPedido()">Enviar Pedido</button>
+        <button id="novo-pedido" class="botao-confirmar" onclick="novoPedido()">Novo Pedido</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="overlay" class="overlay"></div>
+<!--fim popup de confirmacao -->
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
