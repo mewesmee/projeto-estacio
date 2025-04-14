@@ -30,7 +30,7 @@ function enviarMensagem() {
 			total += asNuber*quantidade[i].valueAsNumber
 		}
 	total = total.toString().replace(",",".")
-	mensagem += `total: RS ${total}`
+	mensagem += `Total: RS ${total}`
 	console.log(mensagem)
 	const mensagem1 =encodeURIComponent(mensagem)
 	window.open(`https://wa.me/${numero}?text=${mensagem1}`)
