@@ -64,125 +64,17 @@
       media="screen"
     /> -->
     <!--Inicio de Estilo da Pagina-->
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: #742278;
-      }
-
-      body::before {
-        content: "";
-        position: absolute;
-        top: 50;
-        left: 100;
-        width: 100%;
-        height: 100%;
-        background: url(https://snowfruit.com.br/wp-content/webp-express/webp-images/uploads/2021/11/como_aumentar_as_vendas_no_verao_com_as_barcas_de_acai.png.webp) no-repeat center center;
-        background-size: cover;
-        opacity: 0.1;
-        z-index: -5;
-      }
-
-      header {
-        width: 100%;
-        height: 25vh;
-      }
-      .top_page {
-        background-color: #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 70%;
-        float: left;
-      }
-
-      .logotipo {
-        display: flex;
-        position: relative;
-        width: 15vh;
-        height: 15vh;
-      }
-
-      .menu {
-        width: 50%;
-        height: 15vh;
-        display: flex;
-        color: #742278;
-        font-weight: bold;
-        font-size: 20px;
-        align-items: center;
-        justify-content: center;
-      }
-      .menu a {
-        text-decoration: none;
-        color: #742278;
-      }
-      .menu ul li {
-        display: inline;
-        margin: 2px;
-        padding: 3px;
-        position: relative;
-      }
-
-      .menu ul li ul {
-        display: none;
-      }
-
-      .menu ul li:hover ul {
-        display: block;
-        position: absolute;
-      }
-
-      /* Begin Wesley Page Styles*/
-      .container {
-        width: 80%;
-        margin: 0px auto;
-        padding: 20px;
-        background-color: white;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-      }
-      h1 {
-        text-align: center;
-        color: #4caf50;
-      }
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-      }
-      th,
-      td {
-        padding: 12px;
-        text-align: center;
-        border: 1px solid #ddd;
-      }
-      th {
-        background-color: #4caf50;
-        color: white;
-      }
-      tr:nth-child(even) {
-        background-color: #f2f2f2;
-      }
-      .price {
-        font-weight: bold;
-        color: #ff5722;
-      }
-      /* End Wesley Page Styles*/
-    </style>
-    <!--Fim Do Estilo da Pagina-->
+    <link href="reset.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
     <title>Nossos Sabores</title>
   </head>
   <body>
     <header>
       <div class="top_page" id="top_page" name="top_page">
         <div class="logotipo" id="logotipo" name="logotipo">
-          <img src="Imagens/logo.jpg" alt="" />
+          <img src="logo.png" alt="logo icecream" />
         </div>
         <div class="icones_topo" id="icones_topo" name="icones_topo"></div>
-
         <div class="menu" name="menu" id="menu">
           <ul>
             <li><a href="#">Home</a></li>
@@ -310,7 +202,7 @@
   </table>
   
   <br>
-  <button id="finalizarPedido" style="padding: 10px 20px; background-color: #4caf50; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="finalizarPedido()">
+  <button id="finalizarPedido" style="padding: 10px 20px; background-color: #4caf50; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="enviarMensagem()">
     Finalizar Pedido
   </button>
   <button id="limparCarrinho" style="padding: 10px 20px; background-color: #f44336; color: white; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;" onclick="limparPedido()">
@@ -357,7 +249,6 @@
       <!-- Fim do Formulário -->
 
     </div>
-    <script src="app.js"></script>
-
+    <script src="projeto-a-ser-editado.js"></script>
   </body>
 </html>
