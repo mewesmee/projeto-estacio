@@ -9,6 +9,7 @@
     
       .overlay {
           display: none;
+          /* código de posicionamento */
           position: fixed;
           top: 0;
           left: 0;
@@ -320,21 +321,30 @@
 
       <!-- Formulário de Opinião -->
       <h2>Deixe sua opinião</h2>
-      <form>
+      <form class="formulario">
         <label for="comentario">Comentário:</label><br />
         <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Escreva aqui..."></textarea><br /><br />
 
-        <label>Avaliação:</label><br />
-        <input type="radio" id="estrela5" name="avaliacao" value="5" />
-        <label for="estrela5">⭐️⭐️⭐️⭐️⭐️</label><br />
-        <input type="radio" id="estrela4" name="avaliacao" value="4" />
-        <label for="estrela4">⭐️⭐️⭐️⭐️</label><br />
-        <input type="radio" id="estrela3" name="avaliacao" value="3" />
-        <label for="estrela3">⭐️⭐️⭐️</label><br />
-        <input type="radio" id="estrela2" name="avaliacao" value="2" />
-        <label for="estrela2">⭐️⭐️</label><br />
-        <input type="radio" id="estrela1" name="avaliacao" value="1" />
-        <label for="estrela1">⭐️</label><br /><br />
+        <!-- código de flex-box -->
+        <label>Avaliação:</label>
+        <div>
+          <input type="radio" id="estrela5" name="avaliacao" value="5" />
+        <label for="estrela5">⭐️⭐️⭐️⭐️⭐️</label>
+        </div>
+        <div>
+          <input type="radio" id="estrela5" name="avaliacao" value="5" />
+        <label for="estrela5">⭐️⭐️⭐️⭐️</label>
+        </div>  <div>
+          <input type="radio" id="estrela5" name="avaliacao" value="5" />
+        <label for="estrela5">⭐️⭐️⭐️</label>
+        </div>  <div>
+          <input type="radio" id="estrela5" name="avaliacao" value="5" />
+        <label for="estrela5">⭐️⭐️</label>
+        </div>  <div>
+          <input type="radio" id="estrela5" name="avaliacao" value="5" />
+        <label for="estrela5">⭐️</label>
+        </div>
+      
 
         <input type="submit" value="Enviar Opinião" />
       </form>
@@ -429,7 +439,7 @@
       box-shadow: 0 0 10px rgba(193, 53, 132, 0.5);
       transition: background-color 0.3s, transform 0.2s;
     }
-
+/* código de pseudo classe */
     .instagram-button:hover {
       background-color: #e04e9e;
       transform: scale(1.05);
