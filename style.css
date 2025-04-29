@@ -183,6 +183,13 @@ p {
 .instagram-box h2 {
   color: #800080;
   margin-bottom: 10px;
+  
+}
+
+.instagram-box a {
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-size: 20px;
 }
 
 .instagram-box p {
@@ -192,7 +199,7 @@ p {
 }
 
 .instagram-button {
-  background-color: #C13584; 
+  background-color:#e04e9e; 
   color: white;
   padding: 12px 25px;
   border: none;
@@ -200,12 +207,15 @@ p {
   padding: 5px;
   text-align: center;
   border: 1px solid #742278; 
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 14px;
 }
+
 /* código de pseudo classe */
 .instagram-button:hover {
-  background-color: #e04e9e;
+  background-color: #ffffff;
+  color:#e04e9e;
+  
   transform: scale(1.05);
 }
 
