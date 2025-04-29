@@ -1,79 +1,89 @@
+/* css para o corpo do site*/
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #742278;
-  }
+  margin: 0;
+  padding: 0;
+  background-color: #742278;
+}
 
-  body::before {
-    content: "";
-    position: absolute;
-    top: 50;
-    left: 100;
-    width: 100%;
-    height: 100%;
-    background: url(https://snowfruit.com.br/wp-content/webp-express/webp-images/uploads/2021/11/como_aumentar_as_vendas_no_verao_com_as_barcas_de_acai.png.webp) no-repeat center center;
-    background-size: cover;
-    opacity: 0.1;
-    z-index: -5;
-  }
+body::before {
+  content: "";
+  position: absolute;
+  top: 50;
+  left: 100;
+  width: 100%;
+  height: 100%;
+  background: url(https://snowfruit.com.br/wp-content/webp-express/webp-images/uploads/2021/11/como_aumentar_as_vendas_no_verao_com_as_barcas_de_acai.png.webp) no-repeat center center;
+  background-size: cover;
+  opacity: 0.1;
+  z-index: -5;
+}
 
-  header {
-    width: 100%;
-    height: 25vh;
-  }
-  .top_page {
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 70%;
-    float: left;
-  }
+/*css parte superior site(logotipo, menu, etc...)*/
+header {
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  background-color: rgba(255,255,255,0.8);
+  width: 100%;
+  height: 15vh;
+}
 
-  .logotipo {
-    display: flex;
-    position: relative;
-    width: 15vh;
-    height: 15vh;
-    border-radius: 50%;
-    overflow: hidden;
-    border: #f2f2f2 3px solid;
-    box-shadow: black 2px;
-  }
+.logotipo {
+  display: flex;
+  position: relative;
+  width: 15vh;
+  height: 15vh;
+  overflow: hidden;
+  border: #f2f2f2 3px solid;
+  box-shadow: black 2px;
+  border-radius: 10px;
+  margin-left: 10px;;
+}
 
-  .menu {
-    width: 50%;
-    height: 15vh;
-    display: flex;
-    color: #742278;
-    font-weight: bold;
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;
-  }
-  .menu a {
-    text-decoration: none;
-    color: #742278;
-  }
-  .menu ul li {
-    display: inline;
-    margin: 2px;
-    padding: 3px;
-    position: relative;
-  }
+.logotipo img{
+  width: 100%;
+  height:100%;
+}
 
-  .menu ul li ul {
-    display: none;
-  }
+.top_page{
+  width: 100Cardápio da Açaíteria%;
+  height: 15vh;
+  display: flex;
+  
+}
 
-  .menu ul li:hover ul {
-    display: block;
-    position: absolute;
-  }
+.menu {
+position: relative;
+width: 100%;
+height: 15vh;
+display: flex;
+flex-direction: column;
+font-weight: bold;
+font-size: 17px;
+align-items: center;
+justify-content: center;
+margin-left: 12px;;
+}
 
-  /* Begin Wesley Page Styles*/
-  .container {
+.menu a {
+text-decoration: none;
+color: #000000;
+}
+
+.menu ul li {
+display: inline;
+margin: 2px;
+padding: 3px;
+position: relative;
+}
+
+.menu ul li ul {
+display: none
+  
+}
+ 
+/*css para o table do cardapio*/
+.cardapio {
     width: 80%;
     margin: 0px auto;
     padding: 20px;
@@ -81,41 +91,577 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
   }
-  h1 {
-    text-align: center;
-    color: #4caf50;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  th,
-  td {
-    padding: 12px;
-    text-align: center;
-    border: 1px solid #ddd;
-  }
-  th {
-    background-color: #4caf50;
-    color: white;
-  }
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  .price {
-    font-weight: bold;
-    color: #ff5722;
-  }
-  /* End Wesley Page Styles*/
+.titulo{
+  font-size: 30px;
+  font-weight: bold;
+  color: #4caf50;
+  text-align: center;
+   box-shadow: solid 2px black;
+}
+.cardapio th,td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+.cardapio th {
+  background-color: #4caf50;
+  color: white;
+}
 
+.cardapio tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.cardapio .price {
+  font-weight: bold;
+  color: #ff5722;
+}
+
+.cardapio .price::before {
+  content: "R$";
+}
+
+.cardapio button {
+  padding: 8px 12px;
+  background-color: #742278;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}.site_container h3, h4
+.cardapio button:hover {
+background-color: #5d1b61;
+}
+/*css para a pagina inicial*/
+
+.site_container{
+  width: 100%;
+  margin:2% 5% 0 5%;
+  display: inline;
+}
+
+.site_container .titulo{
+  font-size: 30px;
+  width: 100%;
+}
+
+site_container h3, h4{
+  background-color: #ffffff;
+}
+
+p {
+  background-color: white;
+  width: 95%;
+  margin: 0 2.5%;
+  color: #800080; 
+  font-size: 1.5em;
+  text-shadow: 0 0 8px rgba(128, 0, 128, 0.5); 
+  font-family: 'Verdana', sans-serif;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+.combos{
+  display: flex;
+}
+.combos p{
+  font-size: 1em;
+}
+
+.instagram-box {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.instagram-box h2 {
+  color: #800080;
+  margin-bottom: 10px;
+}
+
+.instagram-box p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.instagram-button {
+  background-color: #C13584; 
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #742278; 
+  border-radius: 4px;
+  font-size: 14px;
+}
+/* código de pseudo classe */
+.instagram-button:hover {
+  background-color: #e04e9e;
+  transform: scale(1.05);
+}
+
+.insta-icon {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+      
+.botao-pedido {
+  background-color: #4b0082; 
+  color: white;
+  padding: 15px 30px;
+  font-size: 2.4em;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 0 12px rgba(75, 0, 130, 0.5);
+  transition: background-color 0.3s, transform 0.2s;
+  display: inline-block;
+  margin-top: 20px;
+  width: 55%;
+  text-align: center;
+  margin:20px 22.5%;
+}
+
+.botao-pedido:hover/*pseudo Classe*/ {
+  background-color: #6a0dad;
+  transform: scale(1.05);
+}
+/*css para avaliacao*/
+.formulario{
+  width: 100%;
+  background-color: #ffffff;
+  margin: 6px auto;
+}
+
+.formulario label{
+  font-size: 22px;
+  color: green;
+}
+
+.cabecalho{
+  font-size: 16px;
+  text-align: center;
+  padding: 8px;
+  background-color:#800080;
+  color: #ffffff;
+  font-weight: bold;
+}
+.comentario{
+  width: 80%;
+  font-size: 22px;
+  border-radius: 20px;
+  border: 2px solid 800080 ;
+  margin: auto;
+}
+
+.avaliacao{
+  position: relative;
+  top: 50%;
+  left:30%;
+  transform: translate(-50%,-50%) rotateY(180deg);
+  display: flex;
+  }
+.avaliacao input{
+  display: none;
+}
+
+.avaliacao label{
+    display: block;
+    cursor: pointer;
+    width: 50px;
+}
+
+.avaliacao label:before{
+  content: '\f005';
+  font-family: fontAwesome;
+  position: relative;
+  display: block;
+  font-size: 50px;
+  color: #0e1316;
+}
+
+.avaliacao label:after{
+  content: '\f005';
+  font-family: fontAwesome;
+  position: absolute;
+  display: block;
+  font-size: 50px;
+  color: #ffff00;
+  top: 0;
+  opacity: 0;
+  transition: .5;
+  text-shadow: 0 4px 5px rgba(0, 0, 0, .5);
+}
+
+.avaliacao label:hover:after,
+.avaliacao label:hover ~ label:after,
+.avaliacao input:checked ~ label:after{
+  opacity: 1;
+}
+/*css para o carrinho*/
+#resumo-pedido ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 15px 0;
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #742278; 
+  border-radius: 4px;
+  font-size: 14px;
+}
+ 
+#carrinho tbody tr:nth-child(even) {
+  background-color: #f9f9f9; 
+} 
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 3em;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);  
+  font-family: 'Arial', sans-serif;
+}
+
+h2 {
+  color: #800080;
+  text-align: center;
+  background-color: #f9f9f9;
+  font-size: 3em;
+    
+}
+
+#carrinho tbody tr:nth-child(even) {
+ background-color: #f9f9f9; 
+     
+}
+
+
+#resumo-pedido li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+      
+.total {
+    text-align: right;
+    font-size: 1.1em;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px solid #742278;
+}
+
+.popup-botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+      .popup-conteudo {
+    padding: 10px;
+}
+
+.popup h3 {
+    margin-top: 0;
+    color: #742278;
+    text-align: center;
+}
+      
+#resumo-pedido ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+#resumo-pedido li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.total {
+    text-align: right;
+    font-size: 1.1em;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px solid #742278;
+}
+      
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;.cardapio {
+    width: 80%;
+    margin: 0px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+      
+.popup {
+    display: none;
+}
+pos.rating{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%) rotateY(180deg);
+display: flex;ition: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 90%;
+max-width: 400px;
+background-color: white;
+border-radius: 8px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+z-index: 101;
+padding: 20px;
+box-sizing: border-box;
+}
+
+.popup-conteudo {
+    padding: 10px;
+}
+
+.popup h3 {
+    margin-top: 0;
+    color: #742278;
+    text-align: center;
+}
+
+#resumo-pedido ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+#resumo-pedido li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+      
+.total {
+  text-align: right;
+  font-size: 1.1em;  p {
+      ;
+  margin-top: 15px;
+  padding-top: 10px;
+}
+b.rating{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%) rotateY(180deg);
+display: flex;order-top: 2px solid #742278;
+}
+      
+.popup-botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.menu ul li:hover ul {
+  display: block;
+  position: absolute;
+}
+
+  
   .select{
     
   }
-  .formulario {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  
+  
+  /*Estilo Pagina Pop Up de confirmação*/
     
+      .overlay {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          z-index: 100;
+      }
+      
+      .popup {
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+      }
+        /* Barra de pesquisa alinhada à direita */
+        .search-container {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
 
+        .search-container input[type="text"] {
+            padding: 8px;
+            font-size: 16px;
+            width: 250px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .search-container button {
+            padding: 8px 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-container button:hover {
+            background-color: #45a049;idth: 90%;
+          max-width: 400px;
+          background-color: white;
+          border-radius: 8px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          z-index: 101;
+          padding: 20px;
+          box-sizing: border-box;
+      }
+      
+      .popup-conteudo {
+          padding: 10px;
+      }
+      
+      .popup h3 {
+          margin-top: 0;
+          color: #742278;
+          text-align: center;
+      }
+      
+      #resumo-pedido ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 15px 0;
+      }
+      
+      #resumo-pedido li {
+          padding: 8px 0;
+          border-bottom: 1px solid #eee;
+      }
+      
+      .total {
+          text-align: right;
+          font-size: 1.1em;
+          margin-top: 15px;
+          padding-top: 10px;
+          border-top: 2px solid #742278;
+      }
+      
+      .popup-botoes {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 20px;
+      }
+      
+       h1 {
+      color: white;
+      text-align: center;
+      font-size: 3em;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);  
+      font-family: 'Arial', sans-serif;
+    }
+    h2 {
+        color: #800080;
+        text-align: center;
+        background-color: #f9f9f9;
+        font-size: 3em;
+        
+    }
+    .botao-pedido {
+  background-color: #4b0082; 
+  color: white;
+  padding: 15px 30px;
+  font-size: 2.4em;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 0 12px rgba(75, 0, 130, 0.5);
+  transition: background-color 0.3s, transform 0.2s;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.botao-pedido:hover {
+  background-color: #6a0dad;
+  transform: scale(1.05);
+}
+.instagram-box {
+      background-color: white;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      margin-top: 50px;
+      max-width: 600px;
+    }
+
+    .instagram-box h2 {
+      color: #800080;
+      margin-bottom: 10px;
+    }
+
+    .instagram-box p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .instagram-button {
+      background-color: #C13584; 
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1em;
+      box-shadow: 0 0 10px rgba(193, 53, 132, 0.5);
+      transition: background-color 0.3s, transform 0.2s;
+    }
+/* código de pseudo classe */
+    .instagram-button:hover {
+      background-color: #e04e9e;
+      transform: scale(1.05);
+    }
+
+    .insta-icon {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+      
+       #carrinho input.quantidade {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #742278; 
+    border-radius: 4px;
+    font-size: 14px;
   }
+ 
+   #carrinho tbody tr:nth-child(even) {
+    background-color: #f9f9f9; 
+  }
+ 
