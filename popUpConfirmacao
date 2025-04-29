@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="reset.css" rel="stylesheet"/>
+    <link href="styles.css" rel="stylesheet"/>
+  <title>Popup de Confirmação</title>
+ 
+</head>
+<body>
+
+
+    <div class="search-container">
+        <form action="/resultados" method="get">
+            <input type="text" name="query" placeholder="Digite sua pesquisa..." required>
+            <button type="submit">Pesquisar</button>
+        </form>
+    </div>
+
+</body>
+</html>
