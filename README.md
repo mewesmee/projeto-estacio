@@ -1,4 +1,12 @@
-# projeto- Açai delicia 
+# projeto- Açai delicia
+## Alunos :
+## Eduardo André Araújo de Moura  - 202408261306
+## Patrick Mota Quintino Dos Santos - 202403314436
+## Wesley de Jesus Lopes - 202408462182 
+## Rafael Braga Zini Moreira - 202402431501
+## Luciano Silva - 202403513171
+## Luiz Paulo - 202403307601
+## Gustavo - 202403513171
 
 ## instruções de git 
 para o conhecimento geral : https://roadmap.sh/git-github
