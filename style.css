@@ -1,4 +1,8 @@
 /* css para o corpo do site*/
+/* removendo a scroll bar*/
+.scroll-container::-webkit-scrollbar {
+  display: none; 
+}
 body {
   margin: 0;
   padding: 0;
