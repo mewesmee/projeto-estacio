@@ -164,7 +164,7 @@ background-color: #5d1b61;
   background-color: #ffffff;
 }
 
-p {
+.anunciado {
   background-color: white;
   width: 90%;
   margin: 0 2.5%;
@@ -482,8 +482,7 @@ box-sizing: border-box;
       
 .total {
   text-align: right;
-  font-size: 1.1em;  p {
-      ;
+  font-size: 1.1em; 
   margin-top: 15px;
   padding-top: 10px;
 }
