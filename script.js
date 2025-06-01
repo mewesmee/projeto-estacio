@@ -11,6 +11,7 @@ function finalizar()
 	);
 	setTimeout(enviarMensagem,2000)
 }
+// A função adicionar ao pedido cria um elemento DOM InnerHtml
 function adicionarAoPedido(produto, preco) {
 	let carrinho = document.getElementById("carrinho").getElementsByTagName("tbody")[0]; // serve paga pegar a tabela carrinho
 
@@ -95,6 +96,21 @@ function enviarMensagem() {
 	mensagem += `Total: RS ${total}`
 	console.log(mensagem)
 	const mensagem1 =encodeURIComponent(mensagem)
-	window.open(`https://wa.me/${numero}?text=${mensagem1}`)
+	window.open(`https://wa.me/${numero}?text=${mensagem1}`)}
+
+// Event onclick
+function adicionarQuantidade(botao) {
+    const linha = botao.closest('tr');
+    const inputQuantidade = linha.querySelector('.quantidade');
+    inputQuantidade.value = parseInt(inputQuantidade.value) + 1;
+
 }
-5
+
+
+  function removerQuantidade(botao) {
+    const linha = botao.closest('tr');
+    const inputQuantidade = linha.querySelector('.quantidade');
+    const quantidadeAtual = parseInt(inputQuantidade.value);
+
+    if (quantidadeAtual > 0) {
+      inputQuantidade.value = quantidadeAtual - 1;}}

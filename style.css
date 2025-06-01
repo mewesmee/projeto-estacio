@@ -262,9 +262,19 @@ background-color: #5d1b61;
 }
 /*css para avaliacao*/
 .formulario{
-  width: 100%;
+  width: 80%;
   background-color: #ffffff;
-  margin-top: 6px;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  position: relative;
+  min-height: max-content;
+  height: 270px;
+  padding: 15px; 
+  display: flex;
+  flex-direction: column;
+  
 }
 
 .formulario label{
@@ -273,12 +283,12 @@ background-color: #5d1b61;
 }
 
 .cabecalho{
-  font-size: 16px;
+  font-size: 32px;
   text-align: center;
   padding: 8px;
-  background-color:#800080;
-  color: #ffffff;
+  color: purple;
   font-weight: bold;
+  
 }
 .comentario{
   width: 80%;
@@ -289,11 +299,12 @@ background-color: #5d1b61;
 }
 
 .avaliacao{
-  position: relative;
-  top: 50%;
-  left:30%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   transform: translate(-50%,-50%) rotateY(180deg);
   display: flex;
+  
   }
 .avaliacao input{
   display: none;

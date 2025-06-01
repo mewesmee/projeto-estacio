@@ -49,7 +49,7 @@
 
     
 
-<p>Seja para refrescar os dias quentes, repor as energias ou simplesmente se deliciar, o nosso açaí é a escolha perfeita. Experimente e descubra por que todo mundo está falando do nosso sabor incomparável!</p>
+<p class="anunciado">Seja para refrescar os dias quentes, repor as energias ou simplesmente se deliciar, o nosso açaí é a escolha perfeita. Experimente e descubra por que todo mundo está falando do nosso sabor incomparável!</p>
     <a href="cardapio.html" class="botao-pedido">Já peça logo o seu</a>
     <div class="instagram-box">
         <div class="insta-icon">📸</div>
@@ -58,19 +58,35 @@
         <a href="https://www.instagram.com/seuusuario" target="_blank" class="instagram-button">Seguir no Instagram</a>
       </div>
       
-       <!-- Formulário de Opinião -->
-    
+       <h2>Deixe sua opinião</h2>
       <form class="formulario">
-        <div class="cabecalho">Deixe sua opinião</div>
         <label for="comentario">Comentário:</label><br />
-        <textarea id="comentario" class="comentario" name="comentario" rows="4" cols="50" placeholder="Escreva aqui..."></textarea><br /><br />
+        <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Escreva aqui..."></textarea><br /><br />
+
+        <!-- código de flex-box -->
+        <label>Avaliação:</label>
+        <div>
+          <input type="radio" id="estrela5" name="avaliacao" value="5" />
+        <label for="estrela5">⭐️⭐️⭐️⭐️⭐️</label>
+        </div>
+        <div>
+          <input type="radio" id="estrela5" name="avaliacao" value="5" />
+        <label for="estrela5">⭐️⭐️⭐️⭐️</label>
+        </div>  <div>
+          <input type="radio" id="estrela5" name="avaliacao" value="5" />
+        <label for="estrela5">⭐️⭐️⭐️</label>
+        </div>  <div>
+          <input type="radio" id="estrela5" name="avaliacao" value="5" />
+        <label for="estrela5">⭐️⭐️</label>
+        </div>  <div>
+          <input type="radio" id="estrela5" name="avaliacao" value="5" />
+        <label for="estrela5">⭐️</label>
+        </div>
+      
+
+        <input type="submit" value="Enviar Opinião" />
       </form>
-      <div class="avaliacao">
-        <input type="radio" name="star" id="star1"><label for="star1"></label>
-        <input type="radio" name="star" id="star2"><label for="star2"></label>
-        <input type="radio" name="star" id="star3"><label for="star3"></label>
-        <input type="radio" name="star" id="star4"><label for="star4"></label>
-        <input type="radio" name="star" id="star5"><label for="star5"></label>
-    </div>
+      <!-- Fim do Formulário -->
+     
   </body>
 </html>
