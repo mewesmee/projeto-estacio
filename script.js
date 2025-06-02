@@ -1,7 +1,4 @@
-function alert()
-{
-	alert('kfsdjlkfds')
-}
+var compras = []
 function finalizar()
 {
 	Swal.fire(
@@ -12,7 +9,7 @@ function finalizar()
 	setTimeout(enviarMensagem,2000)
 }
 // A função adicionar ao pedido cria um elemento DOM InnerHtml
-function adicionarAoPedido(produto, preco) {
+function adicionarAoPedido(produto, preco,quantidade) {
 	let carrinho = document.getElementById("carrinho").getElementsByTagName("tbody")[0]; // serve paga pegar a tabela carrinho
 
 	for (let i = 0; i < carrinho.rows.length; i++) {                            //
@@ -26,15 +23,22 @@ function adicionarAoPedido(produto, preco) {
 	
 	linha.innerHTML = `          
 		<td class="selectProd" >${produto}</td>
-		<td class="selectPrice" >R$ ${preco.toFixed(2).replace('.', ',')}</td>
-		<td><input type="number"  class="quantidade"  value="1" ></td>                                  
-		<td><button class="remover" onclick="this.parentNode.parentNode.remove()">Remover</button></td> 
+		<td class="selectPrice" >R$ ${preco}</td>
+		<td class="selectquantidade">${quantidade} </td>                                  
 	`;
 }
-function removerQuantidade()
+function encherCarrinho(compras)
 {
+	let carrinho = document.getElementById("carrinho").getElementsByTagName("tbody")[0];
 	
+	for (let i = 0; i < carrinho.rows.length; i++) {                            //
+		if (carrinho.rows[i].cells[0] .textContent === produto) {                //
+			alert(`"${produto}" ja esta no carrinho, tente mudar a quantidade`);  // verifica se o item ja esta no carrinho
+			return;                                                              //
+		}
+	}
 }
+
 function limparPedido() {
 	document.getElementById("carrinho").getElementsByTagName("tbody")[0].innerHTML = ""; // tira os itens do carrinho
 }
@@ -72,25 +76,21 @@ function finalizarPedido() {
 	document.getElementById("overlay").style.display = "block";
 }
 
-function novoPedido() {
-	if (confirm("Deseja fazer um novo pedido? isso vai limpar o seu carrinho atual.")){
-		location.reload();
-	}
-}
 function enviarMensagem() {
 	
 	const numero = "5521970124125";
 	const produtos = document.querySelectorAll(".selectProd")
 	const preços = document.querySelectorAll(".selectPrice")
-	const quantidade = document.querySelectorAll(".quantidade")
+	const quantidade = document.querySelectorAll(".selectquantidade")
 	console.log(quantidade)
 	let total = 0
 	let mensagem =`Olá, gostaria de fazer o pedido: \n`
 	for(let i = 0; i < produtos.length; i++)
 		{
-			mensagem += `produto:${produtos[i].innerHTML} quantidade: ${quantidade[i].valueAsNumber} preço unitario:${preços[i].innerHTML} \n`
+			mensagem += `produto:${produtos[i].innerHTML} quantidade: ${quantidade[i].innerText} preço unitario:${preços[i].innerHTML} \n`
 			let asNuber = parseFloat(preços[i].innerHTML.replace(",",".").replace("R$ ",""))
-			total += asNuber*quantidade[i].valueAsNumber
+			console.log(quantidade.innerText)
+			total += asNuber*parseInt(quantidade[i].innerText)
 		}
 	total = total.toString().replace(",",".")
 	mensagem += `Total: RS ${total}`
@@ -100,17 +100,46 @@ function enviarMensagem() {
 
 // Event onclick
 function adicionarQuantidade(botao) {
-    const linha = botao.closest('tr');
-    const inputQuantidade = linha.querySelector('.quantidade');
-    inputQuantidade.value = parseInt(inputQuantidade.value) + 1;
+	const linha = botao.closest('tr');
+	const inputQuantidade = linha.querySelector('.quantidade');
+	const produto = linha.querySelector('.produto').innerText;
+	const descricao = linha.querySelector('.descricao').innerText;
+	const preco = linha.querySelector('.price').innerText;
+	inputQuantidade.value = parseInt(inputQuantidade.value) + 1;
+	console.log(compras)
+	adicionarAoPedido(produto, preco,inputQuantidade.value)
+	salvarEditarSessionStorage(produto,descricao,preco,inputQuantidade.value)
 
 }
-
+function salvarEditarSessionStorage(produto,descricao,preco,quantidade)
+{
+	const dadosLinha = {
+		produto: produto,
+		descricao: descricao,
+		preco: preco,
+		quantidade: quantidade
+	};
+	let repetido = false
+	for(i=0;i < compras.length;i++)
+		{
+			if(compras[i].produto == produto)
+				{
+					compras[i].quantidade = compras[i].quantidade + 1
+				}
+				repetido = true
+		}
+	if(repetido === false){compras.push(dadosLinha)}
+	for(i=0;i < compras.length;i++)
+		{
+			
+		}
+	
+}
 
   function removerQuantidade(botao) {
-    const linha = botao.closest('tr');
-    const inputQuantidade = linha.querySelector('.quantidade');
-    const quantidadeAtual = parseInt(inputQuantidade.value);
+	const linha = botao.closest('tr');
+	const inputQuantidade = linha.querySelector('.quantidade');
+	const quantidadeAtual = parseInt(inputQuantidade.value);
 
-    if (quantidadeAtual > 0) {
-      inputQuantidade.value = quantidadeAtual - 1;}}
+	if (quantidadeAtual > 0) {
+	  inputQuantidade.value = quantidadeAtual - 1;}}

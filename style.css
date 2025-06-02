@@ -3,6 +3,7 @@
 .scroll-container::-webkit-scrollbar {
   display: none; 
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -101,6 +102,9 @@ display: none
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
  
   }
+.hidden {
+  display: none;
+}
 .titulo{
   font-size: 30px;
   font-weight: bold;
