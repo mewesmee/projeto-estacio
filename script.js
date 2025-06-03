@@ -6,7 +6,7 @@ function finalizar()
 		'voce sera direcionado para o whatsaap para finalizar seu pedido',
 		'success'
 	);
-	setTimeout(enviarMensagem,2000)
+	setTimeout(enviarMensagem,2800)
 }
 // A função adicionar ao pedido cria um elemento DOM InnerHtml
 function adicionarAoPedido(produto, preco,quantidade) {
