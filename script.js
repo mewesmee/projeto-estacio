@@ -10,35 +10,20 @@ function finalizar()
 }
 // A função adicionar ao pedido cria um elemento DOM InnerHtml
 function adicionarAoPedido(produto, preco,quantidade) {
-	let carrinho = document.getElementById("carrinho").getElementsByTagName("tbody")[0]; // serve paga pegar a tabela carrinho
+	let carrinho = document.getElementById("itemlista"); // serve paga pegar a tabela carrinho
+	carrinho.innerHTML = ""
+	for(i=0 ;i < compras.length;i++)
+		{
+			carrinho.innerHTML += ` <tr>         
+				<td class="selectProd" >${compras[i].produto}</td>
+				<td class="selectPrice" >R$ ${compras[i].preco}</td>
+				<td class="selectquantidade">${compras[i].quantidade} </td>
+				</tr>								  
+			`
 
-	for (let i = 0; i < carrinho.rows.length; i++) {                            //
-		if (carrinho.rows[i].cells[0] .textContent === produto) {                //
-			alert(`"${produto}" ja esta no carrinho, tente mudar a quantidade`);  // verifica se o item ja esta no carrinho
-			return;                                                              //
 		}
-	}
-
-	let linha = carrinho.insertRow();  
 	
-	linha.innerHTML = `          
-		<td class="selectProd" >${produto}</td>
-		<td class="selectPrice" >R$ ${preco}</td>
-		<td class="selectquantidade">${quantidade} </td>                                  
-	`;
 }
-function encherCarrinho(compras)
-{
-	let carrinho = document.getElementById("carrinho").getElementsByTagName("tbody")[0];
-	
-	for (let i = 0; i < carrinho.rows.length; i++) {                            //
-		if (carrinho.rows[i].cells[0] .textContent === produto) {                //
-			alert(`"${produto}" ja esta no carrinho, tente mudar a quantidade`);  // verifica se o item ja esta no carrinho
-			return;                                                              //
-		}
-	}
-}
-
 function limparPedido() {
 	document.getElementById("carrinho").getElementsByTagName("tbody")[0].innerHTML = ""; // tira os itens do carrinho
 }
@@ -106,9 +91,9 @@ function adicionarQuantidade(botao) {
 	const descricao = linha.querySelector('.descricao').innerText;
 	const preco = linha.querySelector('.price').innerText;
 	inputQuantidade.value = parseInt(inputQuantidade.value) + 1;
-	console.log(compras)
-	adicionarAoPedido(produto, preco,inputQuantidade.value)
 	salvarEditarSessionStorage(produto,descricao,preco,inputQuantidade.value)
+	adicionarAoPedido(produto, preco,inputQuantidade.value)
+	
 
 }
 function salvarEditarSessionStorage(produto,descricao,preco,quantidade)
@@ -124,9 +109,10 @@ function salvarEditarSessionStorage(produto,descricao,preco,quantidade)
 		{
 			if(compras[i].produto == produto)
 				{
-					compras[i].quantidade = compras[i].quantidade + 1
+					compras[i].quantidade = parseInt(compras[i].quantidade) + 1
+					repetido = true
 				}
-				repetido = true
+				
 		}
 	if(repetido === false){compras.push(dadosLinha)}
 	for(i=0;i < compras.length;i++)
