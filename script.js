@@ -12,6 +12,7 @@ function finalizar()
 function adicionarAoPedido(produto, preco,quantidade) {
 	let carrinho = document.getElementById("itemlista"); // serve paga pegar a tabela carrinho
 	carrinho.innerHTML = ""
+	let total = 0
 	for(i=0 ;i < compras.length;i++)
 		{
 			carrinho.innerHTML += ` <tr>         
@@ -20,12 +21,11 @@ function adicionarAoPedido(produto, preco,quantidade) {
 				<td class="selectquantidade">${compras[i].quantidade} </td>
 				</tr>								  
 			`
-
+			total += parseFloat(compras[i].preco)*parseFloat(compras[i].quantidade)
 		}
+	carrinho.innerHTML += `<tr style='textalising: center'>Total : RS ${total}</tr>`
 	
-}
-function limparPedido() {
-	document.getElementById("carrinho").getElementsByTagName("tbody")[0].innerHTML = ""; // tira os itens do carrinho
+	
 }
 
 
@@ -121,11 +121,56 @@ function salvarEditarSessionStorage(produto,descricao,preco,quantidade)
 		}
 	
 }
+function deletarEditarSessionStorage(produto,descricao,preco,quantidade)
+{
+	const dadosLinha = {
+		produto: produto,
+		descricao: descricao,
+		preco: preco,
+		quantidade: quantidade
+	};
+	let repetido = false
+	for(i=0;i < compras.length;i++)
+		{
+			if(compras[i].produto == produto)
+				{
+					compras[i].quantidade = parseInt(compras[i].quantidade) - 1
+					if (compras[i].quantidade <= 0)
+						{
+							compras.splice(i,1)
+						}
+					repetido = true
+				}
+				
+		}
+	if(repetido === false){compras.push(dadosLinha)}
+	for(i=0;i < compras.length;i++)
+		{
+			
+		}
+	
+}
+
 
   function removerQuantidade(botao) {
 	const linha = botao.closest('tr');
 	const inputQuantidade = linha.querySelector('.quantidade');
-	const quantidadeAtual = parseInt(inputQuantidade.value);
-
-	if (quantidadeAtual > 0) {
-	  inputQuantidade.value = quantidadeAtual - 1;}}
+	const produto = linha.querySelector('.produto').innerText;
+	const descricao = linha.querySelector('.descricao').innerText;
+	const preco = linha.querySelector('.price').innerText;
+	
+	if(inputQuantidade.value <= 0)
+		{
+			inputQuantidade.value = 0
+		}
+	else
+	{
+		inputQuantidade.value -= 1 
+		deletarEditarSessionStorage(produto,descricao,preco,inputQuantidade.value)
+		adicionarAoPedido(produto, preco,inputQuantidade.value)
+	}
+	{
+		
+	}
+	
+}
