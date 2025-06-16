@@ -67,19 +67,16 @@ function enviarMensagem() {
 	const produtos = document.querySelectorAll(".selectProd")
 	const preços = document.querySelectorAll(".selectPrice")
 	const quantidade = document.querySelectorAll(".selectquantidade")
-	console.log(quantidade)
 	let total = 0
 	let mensagem =`Olá, gostaria de fazer o pedido: \n`
 	for(let i = 0; i < produtos.length; i++)
 		{
-			mensagem += `produto:${produtos[i].innerHTML} quantidade: ${quantidade[i].innerText} preço unitario:${preços[i].innerHTML} \n`
-			let asNuber = parseFloat(preços[i].innerHTML.replace(",",".").replace("R$ ",""))
-			console.log(quantidade.innerText)
+			mensagem += `produto:${produtos[i].innerText} quantidade: ${quantidade[i].innerText} preço unitario:${preços[i].innerText} \n`
+			let asNuber = parseFloat(preços[i].innerText.replace(",",".").replace("R$ ",""))
 			total += asNuber*parseInt(quantidade[i].innerText)
 		}
 	total = total.toString().replace(",",".")
 	mensagem += `Total: RS ${total}`
-	console.log(mensagem)
 	const mensagem1 =encodeURIComponent(mensagem)
 	window.open(`https://wa.me/${numero}?text=${mensagem1}`)}
 
